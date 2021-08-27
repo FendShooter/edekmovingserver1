@@ -14,7 +14,7 @@ const sendEmail = async (options) => {
   let message = {
     from: process.env.MAIL_SENDER, // sender address
     to: `"EDEK Moving" < ${process.env.MAIL_RECEIVER}>`, // list of receivers
-    subject: 'Your Quote', // Subject line
+    subject: 'New Quote Request', // Subject line
     // text: 'hello', // plain text body
     html: options.html,
   };
