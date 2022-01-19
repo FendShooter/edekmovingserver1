@@ -227,7 +227,7 @@ exports.postQuote = async (req, res, next) => {
     </table>`,
   };
   await quote.save();
-  await sendEmail(options);
+  await sendEmail(options).catch((err) => console.log(err));
   res.status(201).send({ success: true });
 };
 
