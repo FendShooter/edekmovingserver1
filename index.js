@@ -13,8 +13,8 @@ const app = express();
 app.use(express.json());
 app.use(helmet());
 app.use(morgan('dev'));
-app.use(cors({ origin: 'https://edekmoving.com' }));
-// app.use(cors({ origin: 'http://localhost:5501' }));
+app.use(cors());
+
 //routes
 app.use('/', router);
 const PORT = process.env.PORT || 5000;
